@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a7b4788ba5.js"
+            crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background-color: #171616;
+}
+header{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    top:0;
+    background-color: black;
+}
+.logo{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.logo img{
+    margin: 0;
+}
+.h1{
+    margin-top: 13px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+header a i{
+    font-size: 25px;
+    margin-left: 23px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+header a i:hover{
+      color: #22ff00;
+      transform: scale(1.2);
+}
+.a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+nav ul{
+    margin-left: 600px;
+}
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+}
+.a:hover{
+    color: #22ff00;
+    font-weight: 600;
+}
+.login{
+    border-radius: 50px;
+    border: solid white 2px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.login:hover{
+    background-color: #fff;
+    color: black;
+}
+.container{
+    margin: 100px;
+    margin-top: 50px;
+    color: azure;
+}
+
+.up{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.mid{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.btns{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.btns a{
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 20px;
+    border: solid rgb(255, 255, 255)  2px;
+}
+
+.btns a:hover{
+    background-color: rgb(255, 255, 255);
+    color: #171616;
+}
+.image{
+    position: absolute;
+    left: 56%;
+    top: 15%;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="spotify-white-icon.png" alt>
+        <h1 class="h1">Spotify</h1>
+        <a href="index.html"><i
+            class="fa-solid fa-house"></i></a>
+      <a href="search.html"><i
+            class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="library.html"><i class="fa-solid fa-book"></i></a>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a class="a" href="premium.html">Premium</a></li>
+                    <li><a class="a" href="support.html">Support</a></li>
+                    <li><a class="a" href="dowload.html">Download</a></li>
+                    <li><a class="a" target="main"
+                            href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&access_type=offline&client_id=1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com&state=AQAntQKk%2BW374DG%2Fwe496qbfYTu6DNOpIwSOAAzPSVsf6gpca%2FDwFjgS4ml0HDQMnbL1EW3qhQO7v8SuQI%2FBxDCvVlUJYemMtSsgfbF8X%2Fq5rFlQAVMgBTkawuMTtVSlwRdsl8vjLRUCaKYJ9GyX%2FtrkZ8SuAeDhdXst%2BFqB7n2%2B%2B9r%2FQ7AOWEzdXfNRjqYPS0cdDMcfDxWzjS%2FFcwVWMS6sol0ym7g0Ghnw49tQBgmbiG4Qlk3L%2Bu1mcB75GaUoMRaMovANaou9WDNo3nmo3mCENDRI%2Bc7AuHg4DQRmcHEUyEYCxEOILye7cfPaRRIPpJ5Ih2oId957cUFi1RWL%2Fgb%2FexgrgTXGrg%3D%3D&scope=profile%20email%20openid&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fgoogle%2Fredirect&service=lso&o2v=2&theme=glif&flowName=GeneralOAuthFlow">Sign
+                            up</a></li>
+                    <li><a class="login" href="login.html">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <p class="up">Listen without limits. Try <br>  2 months of Premium for  <br> ₹119.</p> 
+         <p class="mid"> Only ₹119/month after. Cancel anytime.  <br></p>
+         <div class="btns"><a href="">Get Premium Individual</a><a href="">View All Plans</a></div>
+       <p class="down"></p> ₹119 for 2 months, then ₹119 per month after. Offer only  <br>
+        available if you haven't tried Premium before.  <a href="" style="color: white;">Terms apply</a> <br>
+    </div>
+    <img src="tons-images.webp" alt="" class="image">
+</body>
+</html>

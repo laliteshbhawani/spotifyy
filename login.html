@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://kit.fontawesome.com/a7b4788ba5.js"
+        crossorigin="anonymous"></script>
+        <style>
+        body{
+            background-color: #161616;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+        }
+        h1{
+            font-size: 50px;
+        }
+        .container{
+            margin-top: 100px;
+            background-color: #000000;
+            color: aliceblue;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        #username,#password{
+            width: 80%;
+            height: 50px;
+            background-color: #000000;
+            border: none;
+            border-bottom: aliceblue solid 2px;
+            font-size: larger;
+            color: aliceblue;
+        }
+
+        .container i{
+            font-size: 25px;
+        }
+        .check{
+            display: flex;
+        }
+        a{
+            margin-left: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(255, 236, 236);
+            text-decoration: underline;
+        }
+        .container button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 5px;
+            background-color: aliceblue;
+            color: #0b0909;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .container button:hover {
+            background-color: white;
+        }
+        .aa{
+            margin: 0;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="index.html" method="get">
+            <img src="spotify-white-icon.png" alt height="70px"><br>
+            <h1>login</h1>
+            <i class="fa-solid fa-user"> <input type="text" id="username" placeholder="username"
+                required></i><br><br>
+                <i class="fa-solid fa-lock"> <input type="password" id="password" placeholder="password"
+                required></i><br><br>
+            <div class="check">
+                <input type="checkbox"><label for="checkbox">Remember me</label>
+                <a href="">Forgot Password</a>
+            </div>
+            <button type="submit">Login</button><br><br>
+            <a href="" class="aa">Don't have an account? Sign Up</a>
+           </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a7b4788ba5.js"
+            crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing:border-box;
+}
+body{
+    background-color: #171616;
+}
+header{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    top:0;
+    background-color: black;
+}
+.logo{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.logo img{
+    margin: 0;
+}
+.h1{
+    margin-top: 13px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+header a i{
+    font-size: 25px;
+    margin-left: 23px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+header a i:hover{
+      color: #22ff00;
+      transform: scale(1.2);
+}
+
+header input{
+    margin-left: 30px;
+    height: 40px;
+    margin-top: 12px;
+    width: 350px;
+    border-radius: 40px;
+}
+.a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+nav ul{
+    margin-left: 600px;
+}
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+}
+.a:hover{
+    color: #22ff00;
+    font-weight: 600;
+}
+.login{
+    border-radius: 50px;
+    border: solid white 2px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.login:hover{
+    background-color: #fff;
+    color: black;
+}
+.recently{
+    width: 100%;
+    background-color: #171616;
+    color: white;
+    padding: 30px;
+}
+.cardcontainer{
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background-color: #171616;
+}
+.card{
+    height: 240px;
+    width: 180px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    background-color: #252525;
+    padding: 15px;
+    position: relative;
+}
+.card:hover{
+    transform: scale(1.05);
+
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.card h4{
+    background-color: #252525;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.card p{
+    color: #ababab;
+    font-size: 15px;
+
+}
+.playbtn {
+    width: 35px; 
+    height: 35px;
+    border-radius: 50%; 
+    background-color: rgb(0, 255, 30); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    bottom: 40%;
+    opacity: 0;
+}
+
+.playbtn i {
+    background-color: rgb(0, 255, 30);
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.card:hover .playbtn{
+    opacity: 1;
+}
+/* For WebKit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+.mp{
+    position: absolute;
+    width: 90%;
+    margin-left: 50px;
+    display: flex;
+    height: 110px;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(0, 0, 0);
+    font-family: 'roboto', sans-serif;
+    overflow: hidden;
+    padding-left: 20px;
+    border-radius: 20px;
+    bottom: 2%;
+    color: silver;
+}
+
+.disappear{
+    opacity: 0;
+}
+.snan{
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+.songname,.artist{
+    text-align: center;
+    text-transform: capitalize;
+}
+.songname{
+    font-size: 30px;
+    font-weight:bolder;
+}
+
+.artist{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(10, 10, 10);
+}
+.disk{
+    
+   position: relative; 
+   display: flex;
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   background-image: url("pbx1.jpeg");
+   animation: rotate 20s linear infinite;
+   animation-play-state: paused;
+   margin-left: 20px;
+   
+}
+.disk::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+
+}
+.disk.play{
+    animation-play-state: running;
+}
+.disk img{
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+.seekbar{
+     width: 500px;
+     height: 3px;
+     border-radius: 10px;
+     background-color: silver;
+     cursor: pointer;
+}
+ .seekbar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: silver;
+ }
+ .controls{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    gap: 20px;
+ }
+ .playbutton{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: silver;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+ }
+ .playbutton span{
+    position: absolute;
+    background-color: black;
+    top: 13%;
+    left: 29%;
+    border-radius: 2px;
+    color: black;
+    font-size: 40px;
+    background-color: silver;
+ }
+.backward,.forward{
+    width: 40px;
+    height: 40px ;
+    border-radius: 50%;
+    border: none;
+    background-color: silver;
+
+ }
+ .backward i,.forward i{
+       font-size: 20px;
+        color: black;
+        font-weight: bolder;
+ }
+ @keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="spotify-white-icon.png" alt>
+        <h1 class="h1">Spotify</h1>
+        <a href="index.html"><i
+            class="fa-solid fa-house"></i></a>
+      <a href="search.html"><i
+            class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="library.html"><i class="fa-solid fa-book"></i></a>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a class="a" href="premium.html">Premium</a></li>
+                    <li><a class="a" href="support.html">Support</a></li>
+                    <li><a class="a" href="dowload.html">Download</a></li>
+                    <li><a class="a" target="main"
+                            href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&access_type=offline&client_id=1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com&state=AQAntQKk%2BW374DG%2Fwe496qbfYTu6DNOpIwSOAAzPSVsf6gpca%2FDwFjgS4ml0HDQMnbL1EW3qhQO7v8SuQI%2FBxDCvVlUJYemMtSsgfbF8X%2Fq5rFlQAVMgBTkawuMTtVSlwRdsl8vjLRUCaKYJ9GyX%2FtrkZ8SuAeDhdXst%2BFqB7n2%2B%2B9r%2FQ7AOWEzdXfNRjqYPS0cdDMcfDxWzjS%2FFcwVWMS6sol0ym7g0Ghnw49tQBgmbiG4Qlk3L%2Bu1mcB75GaUoMRaMovANaou9WDNo3nmo3mCENDRI%2Bc7AuHg4DQRmcHEUyEYCxEOILye7cfPaRRIPpJ5Ih2oId957cUFi1RWL%2Fgb%2FexgrgTXGrg%3D%3D&scope=profile%20email%20openid&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fgoogle%2Fredirect&service=lso&o2v=2&theme=glif&flowName=GeneralOAuthFlow">Sign
+                            up</a></li>
+                    <li><a class="login" href="login.html">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="recently">
+        <h1>Karan Ujla<i class="fa-solid fa-right-long"></i></h1>
+        <div class="cardcontainer">
+            <div class="card" id="1">
+                <div class="playbtn"><i
+                        class="fa-solid fa-play"></i></div>
+                <img src="size_m_1621144374 295.webp" alt>
+                <h4>295</h4>
+                <p>Sidhu Moosewala</p>
+            </div>
+            <div class="card" id="2">
+                <div class="playbtn"><i
+                        class="fa-solid fa-play"></i></div>
+                <img src="artworks-QKrtMOYHGQSkBC1N-pyT8Yw-t500x500 dripy.webp" alt>
+                <h4>Drippy</h4>
+                <p>Sidhu Moosewala</p>
+            </div>
+            <div class="card" id="3">
+                <div class="playbtn"><i
+                        class="fa-solid fa-play"></i></div>
+                <img src="artworks-kD468on3EXZGPnwm-kiu74g-t500x500 burr.webp" alt>
+                <h4>Burbery</h4>
+                <p>Sidhu Moosewala</p>
+            </div>
+            <div class="card" id="2">
+                <div class="playbtn"><i
+                        class="fa-solid fa-play"></i></div>
+                <img src="Watch Out.webp" alt>
+                <h4>Watch Out</h4>
+                <p>Sidhu Moosewala</p>
+            </div>
+    </div>
+    <audio src id="audio"></audio>
+            <div class="mp disappear">
+                <div class="disk pause"> <img src="disk.webp" alt=""></div>
+                <div class="snan">
+                    <h1 class="songname">Song</h1>
+                    <p class="artist">artist</p>
+                </div>
+                <div class="spppn">
+                    <input type="range" value="0" class="seekbar">
+                    <span class="currenttime">00:00</span>
+                    <span> / </span>
+                    <span class="songtime">00:00</span>
+                    <div class="controls">
+                        <button class="backward"><i
+                                class="fa-solid fa-angles-left"></i></button>
+                        <button class="playbutton pause">
+                            <span  class="pcb"><i class="fa-solid fa-play"></i></span>
+                            <span class="plb"><i class="fa-solid fa-pause"></i></span>
+                        </button>
+                        <button class="forward"><i
+                                class="fa-solid fa-angles-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="sidhu.js"></script>
+    <script  src="script.js"> </script>
+</body>
+</html>
